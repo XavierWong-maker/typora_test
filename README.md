@@ -30,7 +30,7 @@
 <br>
 <font color=green size=5>我是黑体，绿色，尺寸为5</font>
 <br>
-$\textcolor{GreenYellow}{**黄绿**}$
+$\textcolor{GreenYellow}{黄绿}$
 
 >语法：# (一级标题)  ## (二级标题)  ### (三级标题) ......
 
