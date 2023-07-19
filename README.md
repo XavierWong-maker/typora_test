@@ -28,7 +28,7 @@
 ## 一、标题
 **$\textcolor{GreenYellow}{黄绿}$**
 <br>
-<font color=green>我是黑体，绿色，尺寸为5</font>
+<font style="color:green" >我是黑体，绿色，尺寸为5</font>
 <br>
 $\textcolor{GreenYellow}{黄绿}$
 <br>
