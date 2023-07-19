@@ -32,7 +32,7 @@
 <br>
 $\textcolor{GreenYellow}{黄绿}$
 <br>
-数据**$\textcolor{red}{输入}$** 与**$\textcolor{red}{输出}$**是计算机系统不可或缺的部分
+数据 **$\textcolor{red}{输入}$**  与 **$\textcolor{red}{输出}$** 是计算机系统不可或缺的部分
 
 >语法：# (一级标题)  ## (二级标题)  ### (三级标题) ......
 
