@@ -1,56 +1,74 @@
-# typora_test
+## 函数对象
 
-# markdown的使用说明# markdown的使用说明
+- 使用具体的类对象取代函数
+- 该类的对象`具备函数调用行为`
+- 多个对象相互独立
 
-## 一、标题
+函数调用操作符（`（）`）
 
->语法：# (一级标题)  ## (二级标题)  ### (三级标题) ......
+- 只能通过类的成员函数重载
+- 可以定义不同参数的多个重载函数
 
->代码：
->
->```text
-># 这是一级标题
->## 这是二级标题
->```
+```c++
+class Fib
+{
+    int a0;
+    int a1;
+public:
+    Fib()
+    {
+        a0 = 0;
+        a1 = 1;
+    }
 
->效果:  
->
-># 这是一级标题
->
->## 这是二级标题
+    Fib(int n)
+    {
+        a0 = 0;
+        a1 = 1;
 
->快捷键:
->
->* Ctrl+数字1~6可以快速将选中的文本调成对应级别的 $\textcolor{GreenYellow}{标题}$ 的
->* Ctrl+0可以快速将`选中`的文本调成普通文本
->* Ctrl+加号/减号对标题级别进行加减
+        for(int i = 2; i <= n; i++)
+        {
+            int t = a1;
+            a1 = a0 + a1;
+            a0 = t;
+        }
+    }
 
-## 一、标题
-$\textcolor{GreenYellow}{黄绿}$
-<br>
-<font style="color:green" >我是黑体，绿色，尺寸为5</font>
-<br>
-$\textcolor{GreenYellow}{黄绿}$
-<br>
-<font face="微软雅黑" size=6 color=#008000 >微软雅黑字体</font>
+    int operator ()()
+    {
+        int ret = a1;
+        a1 = a0 + a1;
+        a0 = ret;
 
->语法：# (一级标题)  ## (二级标题)  ### (三级标题) ......
+        return ret;
+    }
+};
 
->代码：
->
->```text
-># 这是一级标题
->## 这是二级标题
->```
+int main ()
+{
+    Fib fib;
 
->效果:  
->
-># 这是一级标题
->
->## 这是二级标题
+    for(int i = 0; i < 10; i++)
+    {
+        cout << fib() << endl;
+    }
 
->快捷键:
->
->* Ctrl+数字1~6可以快速将选中的文本调成对应级别的标题
->* Ctrl+0可以快速将选中的文本调成普通文本
->* Ctrl+加号/减号对标题级别进行加减
+    cout << endl;
+
+    for(int i = 0; i < 5; i++)
+    {
+        cout << fib() << endl;
+    }
+
+    cout << endl;
+
+    Fib fib2(10);
+
+    for(int i = 0; i < 5; i++)
+    {
+        cout << fib2() << endl;
+    }
+}
+```
+
+## 赋值操作符疑问
