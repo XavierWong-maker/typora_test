@@ -26,7 +26,8 @@
 >* Ctrl+加号/减号对标题级别进行加减
 
 ## 一、标题
-**$\textcolor{GreenYellow}{黄绿} $**
+**$\textcolor{GreenYellow}{黄绿}$**
+$\textcolor{GreenYellow}{黄绿}$
 
 >语法：# (一级标题)  ## (二级标题)  ### (三级标题) ......
 
